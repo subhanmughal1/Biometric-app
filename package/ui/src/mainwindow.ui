@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1077</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="windowTabs">
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+    border: none;  
+    background: rgba(235, 235, 235, 90%);  
+}
+
+QTabBar::tab {
+    min-height: 10px; 
+    padding: 5px 15px;  
+}
+
+QTabBar::tab:selected {
+    background-color: #bad0e3;  
+}</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::TabShape::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="connectionTab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../../../resources/icons/connect.png</normaloff>../../../resources/icons/connect.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Connection</string>
+       </attribute>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>9</y>
+          <width>1061</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="schoolName">
+               <property name="text">
+                <string>schoolName</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextBrowser" name="connectionStatus">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 0, 0);
+font: 9pt &quot;Fixedsys&quot;;
+color: rgb(255, 255, 255);
+</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Fixedsys'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="cursorWidth">
+                <number>1</number>
+               </property>
+               <property name="placeholderText">
+                <string>Connection status...</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string>Connection Mode</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <widget class="QRadioButton" name="radioCheckInButton">
+                    <property name="text">
+                     <string>Check In</string>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>18</width>
+                      <height>18</height>
+                     </size>
+                    </property>
+                    <property name="shortcut">
+                     <string>Ctrl+I</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QRadioButton" name="radioCheckOutButton">
+                    <property name="text">
+                     <string>Check Out</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>641</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>621</width>
+           <height>461</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>User Infromation</string>
+         </property>
+         <widget class="QLabel" name="userImageLabel">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>20</y>
+            <width>281</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>User Image</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="Line" name="line">
+          <property name="geometry">
+           <rect>
+            <x>293</x>
+            <y>20</y>
+            <width>20</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+         </widget>
+         <widget class="Line" name="line_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>240</y>
+            <width>601</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QWidget" name="formLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>281</width>
+            <height>226</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="userNameLabel">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="userName"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="userComputerNoLabel">
+             <property name="text">
+              <string>Computer No</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="userComputerNo"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="userTypeLabel">
+             <property name="text">
+              <string>User Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="userType"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="userFeeLabel">
+             <property name="text">
+              <string>Tuition Fee</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="userFee"/>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="userClassName"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="userClassNameLabel">
+             <property name="text">
+              <string>Class Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="userFatherNameLabel">
+             <property name="text">
+              <string>Father Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="userFatherName"/>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="userBalance"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="userBalanceLabel">
+             <property name="text">
+              <string>Balance</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="specialNoteLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>290</y>
+            <width>591</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="connectionActivityBox">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>110</y>
+          <width>401</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Activity Log</string>
+        </property>
+        <widget class="QTextBrowser" name="connectionActivityBrowser">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>381</width>
+           <height>431</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="devicesTab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../../../resources/icons/machine.png</normaloff>../../../resources/icons/machine.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Devices</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QWidget" name="devicesTabMainWidget" native="true">
+          <widget class="QGroupBox" name="boxDevices">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>731</width>
+             <height>271</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Connected Devices</string>
+           </property>
+           <widget class="QTableView" name="devicesTableView">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>711</width>
+              <height>241</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="boxNetworkDevices">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>300</y>
+             <width>731</width>
+             <height>251</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Network Devices</string>
+           </property>
+           <widget class="QTableView" name="networkDevicesTableView">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>711</width>
+              <height>221</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="boxSelectedDevice">
+           <property name="geometry">
+            <rect>
+             <x>740</x>
+             <y>10</y>
+             <width>291</width>
+             <height>541</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Device Options</string>
+           </property>
+           <widget class="QWidget" name="widgetSelectedDevice" native="true">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>271</width>
+              <height>351</height>
+             </rect>
+            </property>
+            <widget class="QWidget" name="formLayoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>271</width>
+               <height>184</height>
+              </rect>
+             </property>
+             <layout class="QFormLayout" name="formLayoutDeviceOptions">
+              <item row="0" column="0">
+               <widget class="QLabel" name="deviceNameLabel">
+                <property name="text">
+                 <string>DeviceName</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QWidget" name="deviceNameWidget" native="true">
+                <widget class="QLabel" name="deviceNameLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="devicePlatformLabel">
+                <property name="text">
+                 <string>Platform</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QWidget" name="devicePlatformWidget" native="true">
+                <widget class="QLabel" name="devicePlatformLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="deviceSerialNumberLabel">
+                <property name="text">
+                 <string>Serial Number</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QWidget" name="deviceSerialNumberWidget" native="true">
+                <widget class="QLabel" name="deviceSerialNumberLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="deviceFirmwareVersionLabel">
+                <property name="text">
+                 <string>Firmware Version</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QWidget" name="deviceFirmwareVersionWidget" native="true">
+                <widget class="QLabel" name="deviceFirmwareVersionLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="deviceGatewayLabel">
+                <property name="text">
+                 <string>Gateway</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QWidget" name="deviceGatewayWidget" native="true">
+                <widget class="QLabel" name="deviceGatewayLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="deviceMACAddressLabel">
+                <property name="text">
+                 <string>MAC Address</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QWidget" name="deviceMACAddressWidget" native="true">
+                <widget class="QLabel" name="deviceMACAddressLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="deviceTimeLabel">
+                <property name="text">
+                 <string>Device Time</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QWidget" name="deviceTimeWidget" native="true">
+                <widget class="QLabel" name="deviceTimeLabelValue">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>0</y>
+                   <width>161</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="widgetDeviceActions" native="true">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>209</y>
+               <width>271</width>
+               <height>141</height>
+              </rect>
+             </property>
+             <widget class="QPushButton" name="buttonRestartDevice">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>121</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Restart Device</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../resources/icons/play.png</normaloff>../../../resources/icons/play.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="buttonCleanAttendance">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>0</y>
+                <width>131</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Clean Attendance</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../resources/icons/eraser-minus.png</normaloff>../../../resources/icons/eraser-minus.png</iconset>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="buttonSyncAll">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>50</y>
+                <width>121</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Sync All</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../resources/icons/download.png</normaloff>../../../resources/icons/download.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="buttonSyncStudents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>100</y>
+                <width>121</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Sync Students</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../resources/icons/students.png</normaloff>../../../resources/icons/students.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="buttonSyncStaff">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>100</y>
+                <width>131</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Sync Staff</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../resources/icons/staff.png</normaloff>../../../resources/icons/staff.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="buttonCleanData">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>50</y>
+                <width>131</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Clear All Data</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../resources/icons/cancel.png</normaloff>../../../resources/icons/cancel.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+           <widget class="QTextBrowser" name="textBrowserSelectedDeviceLog">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>380</y>
+              <width>271</width>
+              <height>151</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="scanNetworkButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>270</y>
+             <width>111</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scan Network</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../../../resources/icons/refresh.png</normaloff>../../../resources/icons/refresh.png</iconset>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addIPButton">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>270</y>
+             <width>141</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Add IP Address</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../../../resources/icons/plus.png</normaloff>../../../resources/icons/plus.png</iconset>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="usersTab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../../../resources/icons/users.png</normaloff>../../../resources/icons/users.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Users</string>
+       </attribute>
+       <widget class="QWidget" name="usersTabMainWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1061</width>
+          <height>581</height>
+         </rect>
+        </property>
+        <widget class="QTableView" name="usersTableView">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>1041</width>
+           <height>521</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="clientsDropdown">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>241</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="usersTableSearch">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>10</y>
+           <width>401</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string extracomment="Search User here"/>
+         </property>
+         <property name="cursorPosition">
+          <number>0</number>
+         </property>
+         <property name="placeholderText">
+          <string>Search User...</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="settingsTab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../../../resources/icons/settings.png</normaloff>../../../resources/icons/settings.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <widget class="QWidget" name="settingsTabMainWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1051</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>1031</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Server Connection</string>
+         </property>
+         <widget class="QLineEdit" name="schoolURL">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>351</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="schoolUrlLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Enter Institute URL (https://lms.abc.com)</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="apiKeyLabel">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>20</y>
+            <width>121</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Api Key</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="apiKey">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>40</y>
+            <width>241</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="buttonDownloadConfig">
+          <property name="geometry">
+           <rect>
+            <x>630</x>
+            <y>40</y>
+            <width>131</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../resources/icons/check.png</normaloff>../../../resources/icons/check.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="aboutTab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../../../resources/icons/information-italic.png</normaloff>../../../resources/icons/information-italic.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>About</string>
+       </attribute>
+       <widget class="QWidget" name="aboutTabMainWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1061</width>
+          <height>591</height>
+         </rect>
+        </property>
+        <widget class="QGroupBox" name="groupBoxAboutSoftware">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>521</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>About Software</string>
+         </property>
+         <widget class="QWidget" name="formLayoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>481</width>
+            <height>131</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="softwareNameLabel">
+             <property name="text">
+              <string>Software Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QWidget" name="softwareNameWidget" native="true">
+             <widget class="QLabel" name="softwareNameLabelValue">
+              <property name="geometry">
+               <rect>
+                <x>18</x>
+                <y>0</y>
+                <width>271</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Biometric Attendance Software</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="softwareVersionLabel">
+             <property name="text">
+              <string>Software Version</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QWidget" name="softwareVersionWidget" native="true">
+             <widget class="QLabel" name="softwareVersionLabelValue">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>0</y>
+                <width>271</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>3.0.0</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="releaseDateLabel">
+             <property name="text">
+              <string>Release Date</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QWidget" name="releaseDateWidget" native="true">
+             <widget class="QLabel" name="releaseDateLabelValue">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>0</y>
+                <width>271</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>09 Feb 2026</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="companyNameLabel">
+             <property name="text">
+              <string>Company Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QWidget" name="companyNameWidget" native="true">
+             <widget class="QLabel" name="companyNameLabelValue">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>0</y>
+                <width>341</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="websiteLabel">
+             <property name="text">
+              <string>Website</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QWidget" name="websiteWidget" native="true">
+             <widget class="QLabel" name="websiteLabelValue">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>0</y>
+                <width>331</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCheckConnection">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/connect.png</normaloff>../../../resources/icons/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check Connection</string>
+   </property>
+  </action>
+  <action name="actionStartDevice">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/play.png</normaloff>../../../resources/icons/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start Device</string>
+   </property>
+  </action>
+  <action name="actionSynchronizeData">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/download.png</normaloff>../../../resources/icons/download.png</iconset>
+   </property>
+   <property name="text">
+    <string>Synchronize Data</string>
+   </property>
+  </action>
+  <action name="actionClearAttendanceLog">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/eraser--minus.png</normaloff>../../../resources/icons/eraser--minus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Attendance Log</string>
+   </property>
+  </action>
+  <action name="actionCleanAllData">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/minus-circle.png</normaloff>../../../resources/icons/minus-circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clean All Data</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/cross.png</normaloff>../../../resources/icons/cross.png</iconset>
+   </property>
+   <property name="text">
+    <string>Force Close</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit Application</string>
+   </property>
+  </action>
+  <action name="actionAboutUs">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../resources/icons/information-italic.png</normaloff>../../../resources/icons/information-italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Us</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

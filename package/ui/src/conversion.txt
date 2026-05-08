@@ -1,0 +1,3 @@
+run following script from current folder:
+
+pyside6-uic mainwindow.ui > mainwindow_ui.py

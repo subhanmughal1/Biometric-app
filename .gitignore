@@ -1,0 +1,106 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Python Distribution / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit Test / Coverage Reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# SQLite Database
+*.sqlite3
+*.db
+
+# FastAPI / Uvicorn
+*.pid
+
+# MyPy
+.mypy_cache/
+
+# Ruff / Linting
+.ruff_cache/
+
+# PyInstaller
+*.spec
+
+# Docker
+docker-compose.override.yml
+
+# Temporary Files
+tmp/
+temp/
+
+# Uploaded Files
+uploads/
+media/
+
+# AI / Vector DB Files
+chroma/
+faiss_index/
+vectorstore/
+
+# n8n local files
+.n8n/
+
+# Secrets / API Keys
+secrets.json
+credentials.json
+
+# Cache
+.cache/
+
+# Node modules (if frontend included)
+node_modules/
+
+# Coverage
+coverage.xml
+
+# Backup files
+*.bak
+*.swp

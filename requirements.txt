@@ -1,0 +1,22 @@
+# Runtime dependencies
+PyQt6
+psutil
+# pyozk
+
+
+# ZKTeco SDK (maintained on GitHub)
+git+https://github.com/tonyfg/pyzk.git
+
+
+# Build / packaging
+cx_freeze
+
+# Download and Install Qt
+# https://www.qt.io/development/download-qt-installer
+
+# Install dependencies
+# pip install -r requirements.txt
+
+# Freeze requirements for future use
+# pip freeze > requirements.txt
+
